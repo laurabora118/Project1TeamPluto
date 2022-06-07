@@ -4,20 +4,64 @@
   <head>
     <meta charset="UTF-8" />
     <title>Team Pluto Project1</title>
-    
     <link rel="stylesheet" href="Assets/CSS/style.css" />
   </head>
 
   <body>
     <header>SUN SCOUT</header>
-    <h1>Search the sunrise and sunset time</h1>
-    <div id="dailytime"></div>
-    <div></div>
-
-
-
+    <section id="mysearch">
+      <p>Search the sunrise or sunset time</p>
+        <div id="dailytime"></div>
+          <div><input type="Enter Latitude and Longitude Here"></div>
+        <div><button>Scout</button></div>
+    </section>
+    <section>
+      <p>OPTION WITH DROP DOWN CITIES EXAMPLE ONLY</p>
+      <div> <label for="city">Select a city: </label>
+        <select name="city" id="city">
+          <option value="Detroit">Detroit, MI</option>
+            <option value="Miami">Miami, FL</option>
+            <option value="New York">New York, NY</option>
+          <option value="Boston">Boston, MA</option>
+        </select>
+      </div>
+    </section>
+     <section id="mysearch"> 
+        <p>OPTION WITH LIST Major Cities</p>
+          <ul>Detroit, MI</ul>
+          <ul>Miami, FL</ul>
+          <ul>New York, NY</ul>
+          <ul>Boston, MA</ul>
+          <ul>Austin, TX</ul>
+          <ul>Houston, TX</ul>
+          <ul>Phoenix, AZ</ul>
+          <ul>Albquerque, NM</ul>
+          <ul>Denver, CO</ul>
+          <ul>Las Vegas, NV</ul>
+          <ul>Portland, OR</ul>
+          <ul>Los Angelos, CA</ul>
+          <ul>San Francisco, CA</ul>
+      </section>
+    <section id="mysearch">
+        <p>Search for clear or cloudy weather</p>      
+            <div><input type="Add City Here"></div>
+        <div><button>Scout</button></div>
+    </section>
 
     <script src="script.js"></script>
   </body>
 
+  <footer class="footer">
+    <section class="Recap">
+      <ul id="Credit">U OF A Team Pluto Project 1</ul>
+        <ul>Completed by</ul> 
+          <ul>Gerardo Garcia, Celest Tellez and Laura Sandura</ul>
+            <ul> 
+              <a href="https://github.com/laurabora118/Project1TeamPluto">GitHub </a>
+            <a href="https://sunrise-sunset.org/api">API 1 - Sunrise and Sunset</a>
+          <a href="http://www.7timer.info/doc.php?lang=en#weather_chart">API 2 - 7Timer!</a>
+        </ul>
+      <ul>2022 @ All Rights Reserved</ul>
+    </section>
+  </footer>
 </html>

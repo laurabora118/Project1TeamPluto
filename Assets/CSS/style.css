@@ -1,1 +1,41 @@
+* {
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 1px;
+    text-align: center;
+    justify-content: center;
+    background-color: #c7daf7;
+    flex-wrap: wrap;
+    font-size: 16px;
+    color: rgb(21, 21, 22);
+  }
+  
+  a {
+    color: rgb(47, 13, 236);
+  }
+  
+  #title {
+    font-size: 26;
+  }
+  
+  .Credit, #mysearch {
+    color:  rgb(27, 39, 209);
+    font-size: larger;
+    border: 3px solid rgb(27, 39, 209);
+  }
+  
+  .Recap {
+    color:  rgb(151, 27, 209);
+  }
 
+  .footer, header {
+    width: 100%;
+    border: 3px solid rgb(27, 39, 209);
+    background-color:rgb(209, 220, 231);
+    text-indent: 3%;
+    padding: 30px;
+    color: rgb(27, 39, 209);
+    font-size: 22pt;
+    text-indent: 2%;
+    justify-content: space-evenly;
+}
