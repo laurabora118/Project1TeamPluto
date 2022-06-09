@@ -1,43 +1,38 @@
-// var requestData = "http://www.7timer.info/bin/api.pl?lon=33.448&lat=112.074&product=astro&output=json";
+var requestData = "http://www.7timer.info/bin/api.pl?lon=33.448&lat=112.074&product=civil&output=json"; //create function to change lat and long
+var coordinates = document.getElementById("city");
 
-// function getApi(requestData) {
-//     fetch(requestData)
-//       .then(function (response) {
-//         console.log(response);
+function getApi(requestData) {
+    fetch(requestData)
+      .then(function (response) {
+        console.log(response);
     
-//         return response.json();
-//     });
-//   }
+        return response.json();
+    });
+  }
   
-//   getApi(requestData);
+getApi(requestData);
 
 
 
 
-// fetch("http://www.7timer.info/bin/api.pl?lon=112.074&lat=33.448&product=astro&output=json")
-//     .then(Response => Response.json())
-//     .then(data => console.log(data))
+localStorage.setItem("42.3314, 25.7617, 40.7128, 42.3601, 29.7604, 33.4484, 35.0844, 39.7392, 36.1716, 45.5152, 34.0522") //lat
+localStorage.setItem("83.0458, 80.1918, 74.0060, 71.0589, 95.3698, 112.0740, 106.6504, 104.9903, 115.1391, 122.6784, 118.2437") //long
+
+function getCoordinates() {
 
 
+ }
 
-// var requestUrl = 'http://www.7timer.info/bin/api.pl?lon=33.448&lat=112.074&product=astro&output=json';
+ var citySelect = document.getElementById("citySelect")
 
-// var responseText = document.getElementById('response-text');
 
-// function getApi(requestUrl) {
-//   fetch(requestUrl)
-//     .then(function (response) {
-//       console.log(response);
-//       if (response.status === 200) {
-//         responseText.textContent = response.status;
-//       }
-//        response.json();
-//   });
-// }
+ citySelect.addEventListener("submit", function(){
+    if
 
-// getApi(requestUrl);
+ });
 
 
 
 
-//local storage for coordinates
+
+
