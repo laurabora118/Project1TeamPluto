@@ -1,5 +1,28 @@
-var requestData = "http://www.7timer.info/bin/api.pl?lon=33.448&lat=112.074&product=civil&output=json"; //create function to change lat and long
+var requestData = `http://www.7timer.info/bin/api.pl?${cityCoordinates[0].long}&${cityCoordinates[0].lat}&product=civil&output=json`; //create function to change lat and long
 var coordinates = document.getElementById("city");
+var cityCoordinates = [
+   {
+    Name: "Detroit",
+    lat: "",
+    long: "",
+  },
+   {
+     Name: "Miami",
+    lat: "",
+    Long: "",
+  },
+  {
+    Name: "Miami",
+   lat: "",
+   Long: "",
+ },
+ {
+  Name: "Miami",
+ lat: "",
+ Long: "",
+},
+]
+
 
 function getApi(requestData) {
     fetch(requestData)
