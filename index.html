@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   
-  <head>
-    <meta charset="UTF-8" />
-    <title>Team Pluto Project1</title>
-    <link rel="stylesheet" href="./Assets/CSS/style.css"/>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Team Pluto Project1</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css"/>
+</head>
 
-  <body>
-    <header>SUN SCOUT</header>
+<body>
+  <header>SUN SCOUT</header>
+  <section>
+    <p>OPTION WITH DROP DOWN CITIES EXAMPLE ONLY</p>
+    <div> <label for="city">Select a city: </label>
+      <select name="city" id="city">
+        <option value="Detroit">Detroit, MI</option>   
+        <option value="Miami">Miami, FL</option>
+        <option value="New York">New York, NY</option>
+        <option value="Boston">Boston, MA</option>
+        <option value="Houston">Houston, TX</option>
+        <option value="Phoenix">Phoenix, AZ</option>
+        <option value="Albquerque">Albquerque, NM</option>
+        <option value="Denver">Denver, CO</option>
+        <option value="Las Vegas">Las Vegas, NV</option>
+        <option value="Portland">Portland, OR</option>
+        <option value="Los Angeles">Los Angeles, CA</option>
+      </select>
+      <div><button>cityscout</button></div>
+    </div>
+  </section>
+
+  <main>
     <section>
-      <p>OPTION WITH DROP DOWN CITIES EXAMPLE ONLY</p>
-      <div> <label for="city">Select a city: </label>
-        <select name="city" id="city">
-          <option value="Detroit">Detroit, MI</option>   
-          <option value="Miami">Miami, FL</option>
-          <option value="New York">New York, NY</option>
-          <option value="Boston">Boston, MA</option>
-          <option value="Houston">Houston, TX</option>
-          <option value="Phoenix">Phoenix, AZ</option>
-          <option value="Albquerque">Albquerque, NM</option>
-          <option value="Denver">Denver, CO</option>
-          <option value="Las Vegas">Las Vegas, NV</option>
-          <option value="Portland">Portland, OR</option>
-          <option value="Los Angeles">Los Angeles, CA</option>
-        </select>
-        <div id="citySelect"><button>City Select</button></div>    
-      </div>
+     <div id="mysearch" class="container">
+       <img src="" alt="Forecast Image"> class="flex" alt="image of forcast"/>
+       <span id="Forecast"></span>
+       <p>Forecast</p>
+       <div><button>Forecast Scout</button></div>
+     </div>
+     <div id="dailytime"><input type="Enter Latitude and Longitude Here"></div>
+    
+     <div id="Sunset" class="container">
+       <img src="" alt="Sunrise and Sunset Image"> class="flex" alt"images if sun"/>
+       <span id="Sunrise"></span>
+       <p>Sunrise/Sunset</p>
+       <div><button>Sun Scout</button></div>
+     </div>
     </section>
-
-    <section id="mysearch">
-      <div class="container">
-        <img src="" alt="Forecast Image">
-        <span id="Forecast"></span>
-        <p>Forecast</p>
-      </div>
-      <div class="container">
-        <img src="" alt="Sunrise and Sunset Image">
-        <span id="Sunrise"></span>
-        <p>Sunrise/Sunset</p>
-      </div>
-      <div id="dailytime"></div>
-      <div><input type="Enter Latitude and Longitude Here"></div>
-        
-
-      <div class="container">
-        <div><button>Forecast Scout</button></div>
-        <div><button>Sun Scout</button></div>
-      </div>
-    </section>
-
-    <script src="./Assets/JS/script.js"></script>
-  </body>
-
-  <footer class="footer">
-    <section class="Recap">
+  </main>
+  
+<footer class= "footer">
+  <section class="Recap">
       <ul id="Credit">U OF A Team Pluto Project 1</ul>
         <ul>Completed by</ul> 
-          <ul>Gerardo Garcia, Celest Tellez and Laura Sandura</ul>
+          <ul>Gerardo Garcia, Celeste Tellez and Laura Sandura</ul>
             <ul> 
               <a href="https://github.com/laurabora118/Project1TeamPluto">GitHub </a>
             <a href="https://sunrise-sunset.org/api">API 1 - Sunrise and Sunset</a>
@@ -65,5 +60,8 @@
         </ul>
       <ul>2022 @ All Rights Reserved</ul>
     </section>
-  </footer>
+ </footer>
+</body>
+<script src="script.js"></script>
 </html>
+
