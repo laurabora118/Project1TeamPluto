@@ -1,13 +1,14 @@
 * {
+   
     box-sizing: border-box;
     padding: 2px;
     margin: 1px;
     text-align: center;
     justify-content: center;
-    background-color: #c7daf7;
     flex-wrap: wrap;
     font-size: 16px;
     color: rgb(21, 21, 22);
+    
   }
   
   a {
@@ -18,24 +19,51 @@
     font-size: 26;
   }
   
-  .Credit, #mysearch {
-    color:  rgb(27, 39, 209);
-    font-size: larger;
-    border: 3px solid rgb(27, 39, 209);
-  }
-  
-  .Recap {
-    color:  rgb(151, 27, 209);
+  body { 
+    background-image: linear-gradient(red, yellow,blue,cyan);
   }
 
-  .footer, header {
+
+  header {
+    padding: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#E7FF85;
+    font-size: 50px;
+  }
+
+  p {
+    color: black;
+    font-size: 20px;
+  }
+
+  .main, section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+    margin: 40px;
+    width: 95%;
+    height: 100%;
+    background-color: antiquewhite;
+    color: #E7FF85;
+  }
+
+  .mysearch {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sunset {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer {
     width: 100%;
-    border: 3px solid rgb(27, 39, 209);
-    background-color:rgb(209, 220, 231);
     text-indent: 3%;
     padding: 30px;
-    color: rgb(27, 39, 209);
+    color: #E7FF85;
     font-size: 22pt;
     text-indent: 2%;
-    justify-content: space-evenly;
+    justify-content: center;
 }
