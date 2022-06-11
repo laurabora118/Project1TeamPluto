@@ -1,6 +1,4 @@
 # Project1TeamPluto
-# Project1TeamPluto
- **Updating to begin preparing ReadMe** 
 1st project challenge completed by Gerardo Garcia, Celest Tellez and Laura Sandura
 
 Main Objective: 
