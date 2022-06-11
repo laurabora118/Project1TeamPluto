@@ -1,5 +1,7 @@
 var citySelector = document.getElementById("city"); //this variable is used in the getCityScout function. I am grabbing the value of the city option dropdown box depending on what is selected.
 var cityScout = document.getElementById("cityscout"); //added an id to the cityscout button in HTML. This variable is called later for the event listener on line 75.
+var latInput = document.getElementById("lat");
+var longInput = document.getElementById("long");
 
 //created an object and stored it in the cityCoordinates variable so that I can access its properties later.
 var cityCoordinates = {
@@ -44,10 +46,30 @@ function getCityScout(){
   console.log(city)
   var cityObj = cityCoordinates[city]
   console.log(cityObj)
-  getApi(cityObj)
+  var latCoordinates = cityObj.lat;
+  console.log(latCoordinates)
+  var longCoordinates = cityObj.long;
+  console.log(longCoordinates)
+ 
+  // getApi(cityObj)
 }
 
+
+
 cityScout.addEventListener("click", getCityScout);
+cityScout.addEventListener("click", function(){
+  var city = citySelector.value;
+  console.log(city)
+  var cityObj = cityCoordinates[city]
+  console.log(cityObj)
+  var latCoordinates = cityObj.lat;
+  console.log(latCoordinates)
+  var longCoordinates = cityObj.long;
+  console.log(longCoordinates)
+  latInput.setAttribute("input", latCoordinates);
+  longInput.setAttribute("input", longCoordinates);
+});
+
 
 //(ignore)
 // var lon = cityObj.Long
@@ -58,12 +80,6 @@ cityScout.addEventListener("click", getCityScout);
  //create function to change lat and long
  //text area look up
 
-
-
-
-
-
-//IMPORTANT!!!!!! The input field for the sun scout and forecast scout buttons is going to be split in two. I'll explain better during class.
 
 
 
