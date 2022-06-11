@@ -25,9 +25,10 @@ var cityCoordinates = {
   },
 } 
 
+//http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=xml
 //might move this function to a different line depending on what makes sense.
 function getApi(cityData) {
-  var requestData = `http://www.7timer.info/bin/api.pl?${cityData.long}&${cityData.lat}&product=civil&output=json`;
+  var requestData = `http://www.7timer.info/bin/api.pl?lon=${cityData.long}&lat=${cityData.lat}&product=civil&output=json`;
     fetch(requestData)
       .then(function (response) {
         console.log(response);
@@ -59,25 +60,10 @@ cityScout.addEventListener("click", getCityScout);
 
 
 
- //this is the old for loop but I scrapped this idea
-//   function getApi(url) {
-//     for (var i = 0; i < cityCoordinates.length; i++){
 
-//     }
-
-//     fetch(requestData)
-//       .then(function (response) {
-//         console.log(response);
-    
-//         return response.json();
-//     });
-//   }
-  
-// // getApi(requestData);
 
 
 //IMPORTANT!!!!!! The input field for the sun scout and forecast scout buttons is going to be split in two. I'll explain better during class.
-//IMPORTANT!!!!!!!!! The api link might be wrong I'm going to fix it!!! There is a syntax error.
 
 
 
