@@ -10,7 +10,7 @@
 <body>
   <header>SUN SCOUT</header>
   <section>
-    <p>OPTION WITH DROP DOWN CITIES EXAMPLE ONLY</p>
+    <p>Select from drop down to acquire Longitude and Latitude for desired city.</p>
     <div> <label for="city">Select a city: </label>
       <select name="city" id="city">
         <option value="Detroit">Detroit, MI</option>   
@@ -28,15 +28,17 @@
        <img src="" alt="Forecast Image"> class="flex" alt="image of forcast"/>
        <span id="Forecast"></span>
        <p>Forecast</p>
-       <div><button>Forecast Scout</button></div>
+       <div><button id="forecastscout">Forecast Scout</button></div>
      </div>
-     <div id="dailytime"><input type="Enter Latitude and Longitude Here"></div>
+
+     <div id="dailytime"><input placeholder="Enter Latitude Here"></div>
+     <div id="long"><input placeholder="Enter Longitude Here"></div>
     
      <div id="Sunset" class="container">
        <img src="" alt="Sunrise and Sunset Image"> class="flex" alt"images if sun"/>
        <span id="Sunrise"></span>
        <p>Sunrise/Sunset</p>
-       <div><button>Sun Scout</button></div>
+       <div><button id="Sunscout">Sun Scout</button></div>
      </div>
     </section>
   </main>
@@ -54,7 +56,7 @@
       <ul>2022 @ All Rights Reserved</ul>
     </section>
  </footer>
+ <script src="./Assets/JS/script.js"></script>
 </body>
-<script src="./Assets/JS/script.js"></script>
 </html>
 
