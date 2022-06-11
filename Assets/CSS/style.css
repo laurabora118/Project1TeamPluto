@@ -23,12 +23,18 @@
     background-image: linear-gradient(red, yellow,blue,cyan);
   }
 
+  section label {
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+  }
+
 
   header {
     padding: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:#E7FF85;
-    font-size: 50px;
+    font-size: 80px;
   }
 
   p {
