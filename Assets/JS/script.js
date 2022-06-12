@@ -44,9 +44,14 @@ function getCityScout(){
   var longCoordinates = cityObj.long;
   console.log(longCoordinates)
  
-  fetch(`http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
+  fetch(`https://www.7timer.info/bin/api.pl?lon={longCoordinates}&lat={latCoordinates}&product=civil&output=json`)
   .then(response => response.json())
   .then(data => console.log(data));
+  
+  //Original
+  //fetch(`http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
+  //.then(response => response.json())
+  //.then(data => console.log(data));
   // getApi(cityObj)
 }
 
