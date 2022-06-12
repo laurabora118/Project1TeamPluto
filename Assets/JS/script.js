@@ -1,5 +1,7 @@
 var citySelector = document.getElementById("city"); //this variable is used in the getCityScout function. I am grabbing the value of the city option dropdown box depending on what is selected.
 var cityScout = document.getElementById("cityscout"); //added an id to the cityscout button in HTML. This variable is called later for the event listener on line 75.
+var latInput = document.getElementById("lat");
+var longInput = document.getElementById("long");
 
 //created an object and stored it in the cityCoordinates variable so that I can access its properties later.
 var cityCoordinates = {
@@ -11,31 +13,25 @@ var cityCoordinates = {
  Miami: {
     Name: "Miami",
     lat: "25.7617",
-    Long: "80.1918",
+    long: "80.1918",
   },
 'New York': {
     Name: "New York",
     lat: "40.7128",
-    Long: "74.0060",
+    long: "74.0060",
   },
  Boston: {
     Name: "Boston",
     lat: "42.3601",
-    Long: "71.0589",
+    long: "71.0589",
   },
 } 
 
-//might move this function to a different line depending on what makes sense.
-function getApi(cityData) {
-  var requestData = `http://www.7timer.info/bin/api.pl?${cityData.long}&${cityData.lat}&product=civil&output=json`;
-    fetch(requestData)
-      .then(function (response) {
-        console.log(response);
-    
-        return response.json();
-    });
-  }
+//http://www.7timer.info/bin/astro.php?lon=113.17&lat=23.09&ac=0&lang=en&unit=metric&output=internal&tzshift=0
+//http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=xml
 
+//http://www.7timer.info/bin/astro.php?lon=${longCoordinates}&lat=${latCoordinates}&ac=0&lang=en&unit=metric&output=json&tzshift=0
+//http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=astro&output=xml
 
 //Made this function instead of doing the for loop because it's shorter and cleaner than a for loop or an array method.
 function getCityScout(){
@@ -43,41 +39,41 @@ function getCityScout(){
   console.log(city)
   var cityObj = cityCoordinates[city]
   console.log(cityObj)
-  getApi(cityObj)
+  var latCoordinates = cityObj.lat;
+  console.log(latCoordinates)
+  var longCoordinates = cityObj.long;
+  console.log(longCoordinates)
+ 
+  fetch(`http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
+  .then(response => response.json())
+  .then(data => console.log(data));
+  // getApi(cityObj)
 }
 
+//https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400
+function getSunriseScout(){
+  var city = citySelector.value;
+  console.log(city)
+  var cityObj = cityCoordinates[city]
+  console.log(cityObj)
+  var latCoordinates = cityObj.lat;
+  console.log(latCoordinates)
+  var longCoordinates = cityObj.long;
+  console.log(longCoordinates)
+ 
+  fetch(`https://api.sunrise-sunset.org/json?lat=${latCoordinates}&lng=${longCoordinates}`)
+  .then(response => response.json())
+  .then(data => console.log(data));
+  // getApi(cityObj)
+}
+
+
 cityScout.addEventListener("click", getCityScout);
-
-//(ignore)
-// var lon = cityObj.Long
-// document.getElementById("whatever").value = lon
-//cityobj.value
-// .anything is accessing properties of an object
-// array.length string.split("")
- //create function to change lat and long
- //text area look up
+cityScout.addEventListener("click", getSunriseScout);
 
 
 
- //this is the old for loop but I scrapped this idea
-//   function getApi(url) {
-//     for (var i = 0; i < cityCoordinates.length; i++){
 
-//     }
-
-//     fetch(requestData)
-//       .then(function (response) {
-//         console.log(response);
-    
-//         return response.json();
-//     });
-//   }
-  
-// // getApi(requestData);
-
-
-//IMPORTANT!!!!!! The input field for the sun scout and forecast scout buttons is going to be split in two. I'll explain better during class.
-//IMPORTANT!!!!!!!!! The api link might be wrong I'm going to fix it!!! There is a syntax error.
 
 
 

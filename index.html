@@ -11,14 +11,14 @@
   <header>SUN SCOUT</header>
   <section>
     <p>Select from drop down to acquire Longitude and Latitude for desired city.</p>
-    <div> <label for="city">Select a city: </label>
-      <select name="city" id="city">
+    <div> <label for="citySelect">Select a city: </label>
+      <select name="cityInput" id="city">
         <option value="Detroit">Detroit, MI</option>   
         <option value="Miami">Miami, FL</option>
         <option value="New York">New York, NY</option>
         <option value="Boston">Boston, MA</option>
       </select>
-      <div><button id="cityscout">cityscout</button></div> 
+      <div><button id="cityscout" value="">cityscout</button></div> 
     </div>
   </section>
   
@@ -31,8 +31,8 @@
        <div><button id="forecastscout">Forecast Scout</button></div>
      </div>
 
-     <div id="dailytime"><input placeholder="Enter Latitude Here"></div>
-     <div id="long"><input placeholder="Enter Longitude Here"></div>
+     <div><input id="lat" type="number" placeholder="Enter Latitude Here"></div> 
+     <div><input id="long" type="number" placeholder="Enter Longitude Here"></div>
     
      <div id="Sunset" class="container">
        <img src="https://media2.giphy.com/media/3o6ZsWSWIkZYHLHTyM/giphy.gif?cid=ecf05e473blh5wmxnl1e7c2hl6dr40jzcce0ulgtfvpeu3kk&rid=giphy.gif&ct=g" alt="Sunrise and Sunset Image" style="width:77%;height:60%">
