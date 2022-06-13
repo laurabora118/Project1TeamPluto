@@ -32,6 +32,10 @@
     font-size: 20px;
   }
 
+  main p {
+    color: black;
+    font-size: 30px;
+  }
 
   header {
     padding: 30px;
@@ -69,11 +73,9 @@
 
   .footer {
     width: 100%;
-    text-indent: 3%;
+    height: 20%;
     padding: 30px;
     color: #E7FF85;
-    font-size: 18pt;
-    text-indent: 2%;
     justify-content: center;
 }
 
