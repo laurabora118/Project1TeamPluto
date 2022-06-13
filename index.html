@@ -3,47 +3,75 @@
   
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Team Pluto Project1</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.google.com/">
   <link rel="stylesheet" href="Assets/CSS/style.css"/>
 </head>
 
 <body>
   <header>SUN SCOUT</header>
+    <h2>Learn How To Use SunScout</h2>
+    <a element class = "pure-button"><button button class="button-foo" id="myBtn">Start Here</button></a>
+       <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>How to get started with SunScout</h2>
+        </div>
+        <div class="modal-body">
+          <p>STEP 1:</p>
+          <p>Select desired city on drop down list, click City Scout.</p>
+          <p>STEP 2:</p>
+          <p>To get sunrise, sunset, or forecast information for the day,</p>
+          <p>Click Sun Scout or Forecast Scout.</p>
+          <p>STEP 3</p>
+          <p>Plan your activities for the day!</p>
+        </div>
+        <div class="modal-footer">
+          <h3>Enjoy</h3>
+        </div>
+      </div>
+    </div>
   <section>
-    <p>Select from drop down to acquire Longitude and Latitude for desired city.</p>
+    <p>Select from drop down to acquire Longitude and Latitude and click for desired city.</p>
     <div> <label for="city">Select a city: </label>
-      <select name="city" id="city">
-        <option value="Detroit">Detroit, MI</option>   
-        <option value="Miami">Miami, FL</option>
-        <option value="New York">New York, NY</option>
-        <option value="Boston">Boston, MA</option>
-      </select>
-      <div><button id="cityscout">cityscout</button></div> 
+      <div id="mysearch" class="container"></div>
+        <select name="city" id="city">
+          <option value="Detroit">Detroit, MI</option>   
+         <option value="Miami">Miami, FL</option>
+         <option value="New York">New York, NY</option>
+         <option value="Boston">Boston, MA</option>
+       </select>
+      <div><a element class = "pure-button"><button button class="button-foo" id="cityscout">City Scout</button></a></div> 
     </div>
   </section>
   
   <main>
     <section>
-     <div id="mysearch" class="container">
-      <span id="Forecast"><img src="https://media3.giphy.com/media/QRhtqYeEywJI4/giphy.gif?cid=ecf05e473trxvtj6lo6hebwbmso7yiuyhi9apegxxlbw84ye&rid=giphy.gif&ct=g" alt="Forecast Image" style="width:110%;height:60%"></span>
-       <p>Forecast</p>
-       <div><button id="forecastscout">Forecast Scout</button></div>
+     <p>Once desired city is chosen, pick Forecast or Sun Scout Button.</p>
+     <div> <label for="myforecast"></label></div>
+      <div id="mysearch" class="container">
+        <span id="Forecast"><img src="https://media3.giphy.com/media/QRhtqYeEywJI4/giphy.gif?cid=ecf05e473trxvtj6lo6hebwbmso7yiuyhi9apegxxlbw84ye&rid=giphy.gif&ct=g" alt="Forecast Image" style="width:110%;height:60%"></span>
+          <p>Forecast</p>
+       <div><a element class = "pure-button"><button button class="button-foo" id="forecastscout">Forecast Scout</button></a></div>
      </div>
 
-     <div id="dailytime"><input placeholder="Enter Latitude Here"></div>
-     <div id="long"><input placeholder="Enter Longitude Here"></div>
+     <!--<div id="dailytime"><input placeholder="Enter Latitude Here"></div>-->
+     <!--<div id="long"><input placeholder="Enter Longitude Here"></div>-->
     
      <div id="Sunset" class="container">
       <span id="Sunrise"><img src="https://media2.giphy.com/media/3o6ZsWSWIkZYHLHTyM/giphy.gif?cid=ecf05e473blh5wmxnl1e7c2hl6dr40jzcce0ulgtfvpeu3kk&rid=giphy.gif&ct=g" alt="Sunrise and Sunset Image" style="width:77%;height:60%"> </span>
        <p>Sunrise/Sunset</p>
-       <div><button id="Sunscout">Sun Scout</button></div>
+       <div><a element class = "pure-button"><button button class="button-foo" id="Sunscout">Sun Scout</button></a></div>
      </div>
     </section>
   </main>
  
 <footer class= "footer">
   <section class="Recap">
-      <ul id="Credit">U OF A Team Pluto Project 1</ul>
+      <ul id="Credit">UOFA TeamPlutoProject1</ul>
         <ul>Completed by</ul> 
           <ul>Gerardo Garcia, Celeste Tellez and Laura Sandura</ul>
             <ul> 

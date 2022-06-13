@@ -21,8 +21,7 @@ Additional Expectations:
     
     Git Repository Site that shows finalized project results: https://laurabora118.github.io/Project1TeamPluto/
 
-    ![Wire Frame](/Assets/images/website1.PNG)
-    ![Wire Frame](/Assets/images/website2.PNG)
+    ![Site Example](\\Assets\images\website1.PNG "Mock up example")
 
 Extra's:
     Created forwarded website to github repo:   www.sunsetscout.co
@@ -37,3 +36,7 @@ References:
     3 - Giphy images used from below sites:
         -https://giphy.com/gifs/illustration-sunset-sunrise-3o6ZsWSWIkZYHLHTyM
         -https://giphy.com/gifs/weather-whats-QRhtqYeEywJI4
+    
+    4 - https://www.w3schools.com/howto/howto_css_modals.asp
+
+    5 - CSS Framework: https://purecss.io/
