@@ -8,7 +8,10 @@
     flex-wrap: wrap;
     font-size: 16px;
     color: rgb(21, 21, 22);
-    
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
   }
   
   a {
@@ -73,6 +76,45 @@
     height: 20%;
     padding: 30px;
     color: #E7FF85;
-    font-size: 22pt;
     justify-content: center;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+  width: 50%;
+  bottom: 5px;
+  z-index: 1;
+  overflow: auto;
+  }
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 50 auto;
+}
+
+.close {
+  color:  rgb(0,0,0);
+  float: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.modal-header, .modal-footer {
+  padding: 4px 20px;
+  background-color:  #f8842d;
+  color: white;
+  font-size: large;
+}
+
+.modal-body {padding: 8px 20px;}
+
+@media screen and (max-width: 1125px) {header, main, section {
+      background: rgb(160, 241, 29);
+      flex-direction: wrap;
+      color:blue;
+  }
 }

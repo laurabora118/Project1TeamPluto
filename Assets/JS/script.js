@@ -1,3 +1,20 @@
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 var citySelector = document.getElementById("city"); //this variable is used in the getCityScout function. I am grabbing the value of the city option dropdown box depending on what is selected.
 var cityScout = document.getElementById("cityscout"); //added an id to the cityscout button in HTML. This variable is called later for the event listener on line 75.
 var latInput = document.getElementById("lat");
@@ -44,9 +61,14 @@ function getCityScout(){
   var longCoordinates = cityObj.long;
   console.log(longCoordinates)
  
-  fetch(`http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
+  fetch(`https://www.7timer.info/bin/api.pl?lon={longCoordinates}&lat={latCoordinates}&product=civil&output=json`)
   .then(response => response.json())
   .then(data => console.log(data));
+  
+  //Original
+  //fetch(`http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
+  //.then(response => response.json())
+  //.then(data => console.log(data));
   // getApi(cityObj)
 }
 
@@ -67,13 +89,44 @@ function getSunriseScout(){
   // getApi(cityObj)
 }
 
+//1 - transfer data needed to local storage with set item
 
 cityScout.addEventListener("click", getCityScout);
 cityScout.addEventListener("click", getSunriseScout);
 
+//2 - get data from local storage with get item AND then also display the data
 
+//LOCAL STORAGE EXAMPLE EQUATION 
+//from https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/
+//setItem() – the setItem method is used to add data to a web storage object. It takes in two arguments, a key and value pair, window. ...
+//getItem() – the getItem method returns the value of the key name that's passed to it, such as window. localStorage. .
 
+//from google w3 https://www.w3schools.com/jsref/prop_win_localstorage.asp
+//*Save Data to Local Storage. 
+//localStorage.setItem(key, value);
+//console.log()
+//*Read Data from Local Storage. 
+//let lastname = localStorage.getItem(key);
+//console.log()
+//*Remove Data from Local Storage. localStorage.removeItem(key);
+//console.log()
+//Remove All (Clear Local Storage) localStorage.clear();
+//console.log()
 
+//SAMPLE FUNCTION FROM w3 schools
+var a = 3;
+function test(a) {
+  let result;
+  if (a > 0) {
+    result = 'positive';
+  } else {
+    result = 'NOT positive';
+  }
+  return result;
+}
+
+console.log(test(-5));
+// expected output: "NOT positive"
 
 
 

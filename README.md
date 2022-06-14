@@ -1,5 +1,5 @@
 # Project1TeamPluto
-1st project challenge completed by Gerardo Garcia, Celest Tellez and Laura Sandura
+1st project challenge completed by Gerardo Garcia, Celeste Tellez and Laura Sandura
 
 Main Objective:
     Build a real-world interactive Front-End application that showcases a review of everything that we learned in the first section of our bootcamp and to be able to use to build our Portfolio. 
@@ -18,7 +18,10 @@ Challenge Requirements:
 
 Additional Expectations:
     Repository link where finalzed project can be pulled: https://github.com/laurabora118/Project1TeamPluto
+    
     Git Repository Site that shows finalized project results: https://laurabora118.github.io/Project1TeamPluto/
+
+    ![Site Example](\\Assets\images\website1.PNG "Mock up example")
 
 Extra's:
     Created forwarded website to github repo:   www.sunsetscout.co
@@ -33,3 +36,7 @@ References:
     3 - Giphy images used from below sites:
         -https://giphy.com/gifs/illustration-sunset-sunrise-3o6ZsWSWIkZYHLHTyM
         -https://giphy.com/gifs/weather-whats-QRhtqYeEywJI4
+    
+    4 - https://www.w3schools.com/howto/howto_css_modals.asp
+
+    5 - CSS Framework: https://purecss.io/
