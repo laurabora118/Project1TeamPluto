@@ -35,32 +35,31 @@
       </div>
     </div>
   <section>
-    <p>Step 1: Select desired city from drop down.</p>
+    <p>Select from drop down to acquire Longitude and Latitude and click for desired city.</p>
     <div> <label for="city">Select a city: </label>
       <div id="mysearch" class="container"></div>
         <select name="city" id="city">
-         <option value="Detroit">Detroit, MI</option>   
+          <option value="Detroit">Detroit, MI</option>   
          <option value="Miami">Miami, FL</option>
          <option value="New York">New York, NY</option>
          <option value="Boston">Boston, MA</option>
        </select>
       <div><a element class = "pure-button"><button button class="button-foo" id="cityscout">City Scout</button></a></div> 
     </div>
+
   </section>
   
   <main>
     <section>
-     <p>Step 2: Search the sunset and forecast data.</p>
-     <div> <label for="myforecast"></label></div>
+     <p>Once desired city is chosen, pick Forecast or Sun Scout Button.</p>
+     <div><p>Forecast:</p><span id = "myForecast"></span></div>
       <div id="mysearch" class="container">
         <span id="Forecast"><img src="https://media3.giphy.com/media/QRhtqYeEywJI4/giphy.gif?cid=ecf05e473trxvtj6lo6hebwbmso7yiuyhi9apegxxlbw84ye&rid=giphy.gif&ct=g" alt="Forecast Image" style="width:110%;height:60%"></span>
           <p>Forecast</p>
        <div><a element class = "pure-button"><button button class="button-foo" id="forecastscout">Forecast Scout</button></a></div>
      </div>
-
-     <!--<div id="dailytime"><input placeholder="Enter Latitude Here"></div>-->
-     <!--<div id="long"><input placeholder="Enter Longitude Here"></div>-->
-    
+     <div><p>Sunrise Time:</p><span id = "mySunrise"></span></div>
+     <div><p>Sunset Time:</p><span id = "mySunset"></span></div>
      <div id="Sunset" class="container">
       <span id="Sunrise"><img src="https://media2.giphy.com/media/3o6ZsWSWIkZYHLHTyM/giphy.gif?cid=ecf05e473blh5wmxnl1e7c2hl6dr40jzcce0ulgtfvpeu3kk&rid=giphy.gif&ct=g" alt="Sunrise and Sunset Image" style="width:77%;height:60%"> </span>
        <p>Sunrise/Sunset</p>
@@ -85,4 +84,3 @@
  <script src="./Assets/JS/script.js"></script>
 </body>
 </html>
-
