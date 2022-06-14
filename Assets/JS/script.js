@@ -1,5 +1,6 @@
 var mySunrise = document.getElementById('mySunrise');
-var mySunset = document.getElementById('mySunset')
+var mySunset = document.getElementById('mySunset');
+var myForecast = document.getElementById('myForecast');
 
 
 var modal = document.getElementById("myModal");
@@ -95,8 +96,12 @@ function getCityScout(){
   console.log(longCoordinates)
   fetch(`https://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
   .then(response => response.json())
-  .then(data => console.log(data));
-
+  .then(function (data) {   
+    console.log("data",data)
+      var ssresponse = data.dataseries[0].weather
+      console.log("ssresponse",ssresponse)
+      myForecast.textContent = ssresponse;
+  });
 }
 
 //FORECAST FOR HTML NAMES
