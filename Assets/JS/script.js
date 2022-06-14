@@ -1,3 +1,7 @@
+var mySunrise = document.getElementById('mySunrise');
+var mySunset = document.getElementById('mySunset')
+
+
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
@@ -13,7 +17,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
 
 var citySelector = document.getElementById("city"); //this variable is used in the getCityScout function. I am grabbing the value of the city option dropdown box depending on what is selected.
 var cityScout = document.getElementById("cityscout"); //added an id to the cityscout button in HTML. This variable is called later for the event listener on line 75.
@@ -60,17 +63,15 @@ function getCityScout(){
   console.log(latCoordinates)
   var longCoordinates = cityObj.long;
   console.log(longCoordinates)
- 
-  fetch(`https://www.7timer.info/bin/api.pl?lon={longCoordinates}&lat={latCoordinates}&product=civil&output=json`)
+  fetch(`https://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
   .then(response => response.json())
   .then(data => console.log(data));
-  
-  //Original
-  //fetch(`http://www.7timer.info/bin/api.pl?lon=${longCoordinates}&lat=${latCoordinates}&product=civil&output=json`)
-  //.then(response => response.json())
-  //.then(data => console.log(data));
-  // getApi(cityObj)
+
 }
+
+//FORECAST FOR HTML NAMES
+//  <div><p>Forecast:</p><span id = "myForecast"></span></div>
+
 
 //https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400
 function getSunriseScout(){
@@ -82,18 +83,24 @@ function getSunriseScout(){
   console.log(latCoordinates)
   var longCoordinates = cityObj.long;
   console.log(longCoordinates)
- 
-  fetch(`https://api.sunrise-sunset.org/json?lat=${latCoordinates}&lng=${longCoordinates}`)
+   fetch(`https://api.sunrise-sunset.org/json?lat=${latCoordinates}&lng=${longCoordinates}`)
   .then(response => response.json())
-  .then(data => console.log(data));
-  // getApi(cityObj)
+  .then(function (data) {   
+    console.log("data",data)
+      var ssresponse = data.results.sunset
+      console.log("ssresponse",ssresponse)
+      var srresponse = data.results.sunrise
+      console.log("srresponse",srresponse)
+      mySunrise.textContent = srresponse;
+      mySunset.textContent = ssresponse;
+  });
 }
 
-//1 - transfer data needed to local storage with set item
 
 cityScout.addEventListener("click", getCityScout);
 cityScout.addEventListener("click", getSunriseScout);
 
+//1 - transfer data needed to local storage with set item
 //2 - get data from local storage with get item AND then also display the data
 
 //LOCAL STORAGE EXAMPLE EQUATION 
@@ -112,31 +119,4 @@ cityScout.addEventListener("click", getSunriseScout);
 //console.log()
 //Remove All (Clear Local Storage) localStorage.clear();
 //console.log()
-
-//SAMPLE FUNCTION FROM w3 schools
-var a = 3;
-function test(a) {
-  let result;
-  if (a > 0) {
-    result = 'positive';
-  } else {
-    result = 'NOT positive';
-  }
-  return result;
-}
-
-console.log(test(-5));
-// expected output: "NOT positive"
-
-
-
-
-
-  
-
-
-
-
-
-
 
