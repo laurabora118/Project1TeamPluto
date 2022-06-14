@@ -36,7 +36,7 @@ var cityCoordinates = {
     lat: "25.7617",
     long: "80.1918",
   },
-'New York': {
+ 'New York': {
     Name: "New York",
     lat: "40.7128",
     long: "74.0060",
@@ -45,6 +45,36 @@ var cityCoordinates = {
     Name: "Boston",
     lat: "42.3601",
     long: "71.0589",
+  },
+ Phoenix: {
+    Name: "Phoenix",
+    lat: "33.4484",
+    long: "112.0740",
+  },
+ Washignton: {
+    Name: "Washington",
+    lat: "38.9072",
+    long: "77.0369",
+  },
+ Alaska: {
+    Name: "Alaska",
+    lat: "64.2008",
+    long: "149.4937",
+  },
+ 'New Hampshire': {
+    Name: "New Hampshire",
+    lat: "43.1939",
+    long: "71.5724",
+  },
+ Texas: {
+    Name: "Texas",
+    lat: "331.9686",
+    long: "99.9018",
+  },
+ Iowa: {
+    Name: "Iowa",
+    lat: "41.8780",
+    long: "93.0977",
   },
 } 
 

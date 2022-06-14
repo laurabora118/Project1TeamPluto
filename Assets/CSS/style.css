@@ -32,6 +32,24 @@
     font-size: 20px;
   }
 
+  .pure-button {
+    border: 0;
+    font-size: 2rem;;
+    background-image: linear-gradient(45deg,#f8842d,cyan);
+  }
+
+  #myBtn, #cityscout, #Sunscout,#forecastscout {
+    border: 0;
+    font-size: 2rem;;
+    background-image: linear-gradient(#f8842d,cyan);
+  }
+
+  #myBtn:hover, #cityscout:hover, #Sunscout:hover, #forecastscout:hover{
+    border: 0;
+    font-size: 2rem;;
+    background-image: linear-gradient(45deg,yellow,cyan);
+  }
+
   main p {
     color: black;
     font-size: 30px;
@@ -89,7 +107,12 @@
   bottom: 5px;
   z-index: 1;
   overflow: auto;
-  }
+}
+
+#mymodal {
+  display:flex;
+  justify-content: center;
+}
 
 .modal-content {
   background-color: #fefefe;
@@ -109,8 +132,6 @@
   color: white;
   font-size: large;
 }
-
-.modal-body {padding: 8px 20px;}
 
 @media screen and (max-width: 1125px) {header, main, section {
       background: rgb(160, 241, 29);
