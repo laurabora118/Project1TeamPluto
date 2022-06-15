@@ -61,16 +61,6 @@ var cityCoordinates = {
     lat: "64.2008",
     long: "149.4937",
   },
- 'New Hampshire': {
-    Name: "New Hampshire",
-    lat: "443.008663",
-    long: "71.454391",
-  },
- Texas: {
-    Name: "Texas",
-    lat: "331.9686",
-    long: "99.9018",
-  },
  Iowa: {
     Name: "Iowa",
     lat: "41.661129",

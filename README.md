@@ -21,7 +21,7 @@ Additional Expectations:
     
     Git Repository Site that shows finalized project results: https://laurabora118.github.io/Project1TeamPluto/
 
-    ![Site Example](\\Assets\images\website1.PNG "Mock up example")
+    ![Site Example](/Assets/images/website.png)
 
 Extra's:
     Created forwarded website to github repo:   www.sunsetscout.co
@@ -37,6 +37,9 @@ References:
         -https://giphy.com/gifs/illustration-sunset-sunrise-3o6ZsWSWIkZYHLHTyM
         -https://giphy.com/gifs/weather-whats-QRhtqYeEywJI4
     
-    4 - https://www.w3schools.com/howto/howto_css_modals.asp
+   4 - Resource Links:
+        -https://www.w3schools.com/howto/howto_css_modals.asp
+        -https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+        -https://slackcommunity.com/
 
     5 - CSS Framework: https://purecss.io/
