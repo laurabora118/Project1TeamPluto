@@ -51,7 +51,7 @@ var cityCoordinates = {
     lat: "33.4484",
     long: "112.0740",
   },
- Washignton: {
+ Washington: {
     Name: "Washington",
     lat: "38.9072",
     long: "77.0369",
@@ -63,8 +63,8 @@ var cityCoordinates = {
   },
  'New Hampshire': {
     Name: "New Hampshire",
-    lat: "43.1939",
-    long: "71.5724",
+    lat: "443.008663",
+    long: "71.454391",
   },
  Texas: {
     Name: "Texas",
@@ -73,8 +73,8 @@ var cityCoordinates = {
   },
  Iowa: {
     Name: "Iowa",
-    lat: "41.8780",
-    long: "93.0977",
+    lat: "41.661129",
+    long: "-91.530167",
   },
 } 
 
