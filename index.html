@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Team Pluto Project1</title>
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.google.com/">
   <link rel="stylesheet" href="Assets/CSS/style.css"/>
 </head>
 
@@ -35,7 +34,7 @@
       </div>
     </div>
   <section>
-    <p>Select from drop down to acquire Longitude and Latitude and click for desired city.</p>
+    <p>Calling all sky enthusiasts! Clear skies and good times is just one click away!</p>
     <div> <label for="city">Select a city: </label>
       <div id="mysearch" class="container"></div>
         <select name="city" id="city">
@@ -56,15 +55,15 @@
   <main>
     <section>
      <p>Once desired city is chosen, pick Forecast or Sun Scout Button.</p>
-     <div><p>Forecast:</p><span id = "myForecast"></span></div>
       <div id="mysearch" class="container">
         <span id="Forecast"><img src="https://media3.giphy.com/media/QRhtqYeEywJI4/giphy.gif?cid=ecf05e473trxvtj6lo6hebwbmso7yiuyhi9apegxxlbw84ye&rid=giphy.gif&ct=g" alt="Forecast Image" style="width:110%;height:60%"></span>
           <p>Forecast</p>
        <div><a element class = "pure-button"><button button class="button-foo" id="forecastscout">Forecast Scout</button></a></div>
      </div>
 
-     <div><p>Sunrise Time:</p><span id = "mySunrise"></span></div>
-     <div><p>Sunset Time:</p><span id = "mySunset"></span></div>
+     <div><p>Sunrise Time:</p><span id = "mySunrise" class="apiResponse"></span></div>
+     <div><p>Sunset Time:</p><span id = "mySunset" class="apiResponse"></span></div>
+     <div><p>Forecast:</p><span id = "myForecast" class="apiResponse"></span></div>
      <div id="Sunset" class="container">
       <span id="Sunrise"><img src="https://media2.giphy.com/media/3o6ZsWSWIkZYHLHTyM/giphy.gif?cid=ecf05e473blh5wmxnl1e7c2hl6dr40jzcce0ulgtfvpeu3kk&rid=giphy.gif&ct=g" alt="Sunrise and Sunset Image" style="width:77%;height:60%"> </span>
        <p>Sunrise/Sunset</p>
