@@ -98,9 +98,9 @@ function getCityScout(){
   .then(response => response.json())
   .then(function (data) {   
     console.log("data",data)
-      var ssresponse = data.dataseries[0].weather
-      console.log("ssresponse",ssresponse)
-      myForecast.textContent = ssresponse;
+      var fcresponse = data.dataseries[0].weather
+      console.log("fcresponse",fcresponse)
+      myForecast.textContent = fcresponse;
   });
 }
 
