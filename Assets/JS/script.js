@@ -118,6 +118,9 @@ function getSunriseScout(){
       console.log("srresponse",srresponse)
       mySunrise.textContent = srresponse;
       mySunset.textContent = ssresponse;
+      //Sunset local Storage
+      var sslocal = ssresponse;
+      localStorage.setItem("sslocal", JSON.stringify(sslocal));
   });
 }
 

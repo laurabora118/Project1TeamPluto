@@ -21,7 +21,7 @@ Additional Expectations:
     
     Git Repository Site that shows finalized project results: https://laurabora118.github.io/Project1TeamPluto/
 
-    ![Site Example](/Assets/images/website.png)
+![Site Example](./Assets/images/website.png)
 
 Extra's:
     Created forwarded website to github repo:   www.sunsetscout.co
