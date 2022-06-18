@@ -90,13 +90,13 @@ function getCityScout(){
     console.log("data",data)
       var fcresponse = data.dataseries[0].weather
       console.log("fcresponse",fcresponse)
-      myForecast.textContent = fcresponse;
+      //myForecast.textContent = fcresponse;
+      //Forecast Local Storage
+      var fclocal = fcresponse;
+      localStorage.setItem("fclocal", JSON.stringify(fclocal));
+      console.log("set forecast local storage")
   });
 }
-
-//FORECAST FOR HTML NAMES
-//  <div><p>Forecast:</p><span id = "myForecast"></span></div>
-
 
 //https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400
 function getSunriseScout(){
@@ -110,41 +110,52 @@ function getSunriseScout(){
   console.log(longCoordinates)
    fetch(`https://api.sunrise-sunset.org/json?lat=${latCoordinates}&lng=${longCoordinates}`)
   .then(response => response.json())
-  .then(function (data) {   
+  .then(function a (data) {   
     console.log("data",data)
       var ssresponse = data.results.sunset
       console.log("ssresponse",ssresponse)
       var srresponse = data.results.sunrise
       console.log("srresponse",srresponse)
-      mySunrise.textContent = srresponse;
-      mySunset.textContent = ssresponse;
+      //mySunset.textContent = ssresponse;
+      //mySunrise.textContent = srresponse;
       //Sunset local Storage
       var sslocal = ssresponse;
       localStorage.setItem("sslocal", JSON.stringify(sslocal));
-  });
+      console.log("set sunset local storage")
+      //Sunrise local Storage
+      var srlocal = srresponse;
+      localStorage.setItem("srlocal", JSON.stringify(srlocal));
+      console.log("set sunrise local storage")
+      });
 }
-
 
 cityScout.addEventListener("click", getCityScout);
 cityScout.addEventListener("click", getSunriseScout);
 
-//1 - transfer data needed to local storage with set item
-//2 - get data from local storage with get item AND then also display the data
+function SrisesetResults(){ 
+  var sunscout = document.getElementById("sunscout");
+      //Sunset Get local Storage
+    let sslocal = localStorage.getItem("sslocal")
+    console.log("get sunset local storage")
+    mySunsetLocal.textContent = sslocal;
+    console.log("send sunset to placeholder")  
+  var sunscout = document.getElementById("sunscout"); 
+    //Sunsrise Get local Storage
+    let srlocal = localStorage.getItem("srlocal")
+    console.log("get sunrise local storage")
+    mySunriseLocal.textContent = srlocal;
+    console.log("send sunrise to placeholder")
+}
 
-//LOCAL STORAGE EXAMPLE EQUATION 
-//from https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/
-//setItem() – the setItem method is used to add data to a web storage object. It takes in two arguments, a key and value pair, window. ...
-//getItem() – the getItem method returns the value of the key name that's passed to it, such as window. localStorage. .
+sunscout.addEventListener("click", SrisesetResults);
+  
+function ForecastResults(){
+  var forecast = document.getElementById("forecastscout");
+      //Forecast Get local Storage 
+      let fclocal = localStorage.getItem("fclocal")
+      console.log("get forecast local storage")
+      myForecast.textContent = fclocal;
+      console.log("send forecast to placeholder")
+}
 
-//from google w3 https://www.w3schools.com/jsref/prop_win_localstorage.asp
-//*Save Data to Local Storage. 
-//localStorage.setItem(key, value);
-//console.log()
-//*Read Data from Local Storage. 
-//let lastname = localStorage.getItem(key);
-//console.log()
-//*Remove Data from Local Storage. localStorage.removeItem(key);
-//console.log()
-//Remove All (Clear Local Storage) localStorage.clear();
-//console.log()
-
+forecastscout.addEventListener("click", ForecastResults);
